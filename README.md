@@ -14,3 +14,57 @@ this.state.liste.map((element) => <Artikel key={element.id} name={element.name} 
 ```
 
 Zum Styling soll [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) eingesetzt werden.
+
+---
+
+## Durchführung
+
+### Vorlage
+
+1. React-App aus Template erstellen
+
+   ```sh
+   npx create-react-app <app-name>
+   ```
+
+2. unnötige Datein in `/src` entfernen: App.test.js, setupTest.js
+
+   ```txt
+   src/
+   ├── App.css
+   ├── App.js
+   ├── index.css
+   ├── index.js
+   ├── logo.svg
+   └── reportWebVitals.js
+   ```
+
+3. Bootstrap in `/public/index.html` einbinden:
+
+   ```html
+   <html lang="de">
+      <head>
+         ...
+         <title>Einkaufsliste</title>
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"    rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"    crossorigin="anonymous">
+      </head>
+      <body>
+         <noscript>You need to enable JavaScript to run this app.</noscript>
+         <div id="root"></div>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"    crossorigin="anonymous"></script>
+      </body>
+   </html>
+   ```
+
+4. App.js in Class Component konvertieren:
+
+   ```js
+   import React from "react";
+   import "./App.css";
+   
+   export default class App extends React.Component {
+      render() {
+         return <div>App</div>;
+      }
+   }
+   ```
